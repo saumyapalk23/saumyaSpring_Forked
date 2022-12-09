@@ -33,8 +33,10 @@ public class CalculatorApiController {
     public ResponseEntity<String> parenthesess(@PathVariable String expression) {
 
         Calculator equation = new Calculator(expression);
-        String finalAnswer = equation.booleantoString();
-        return ResponseEntity.ok(finalAnswer);  
-    }}
+        String result = equation.booleantoString();
+        return ResponseEntity.ok(result);  
+    }
+
+}
     
 
